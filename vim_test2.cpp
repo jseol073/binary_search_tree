@@ -1,5 +1,6 @@
 #include <iostream>
 #include "b_search_tree.hpp"
+#include <string>
 
 using namespace std;
 int main() {
@@ -8,5 +9,9 @@ int main() {
     for (int i : array) {
         test.insert(i);
     }
+    string all_nodes = test.toString(test.getRoot());
+    cout << all_nodes << endl;
+    test.delete_element(5);
+    cout << all_nodes << endl;
     return 0;
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <string>
 
 namespace bst {
 
@@ -51,15 +52,18 @@ public:
     Node<ElementType>* root;
     int size;
     Node<ElementType>* delete_helper(Node<ElementType>* n, ElementType data);
-   // Node<ElementType>* getRoot();
+    Node<ElementType>* getRoot();
     Node<ElementType>* insert_helper(Node<ElementType>* new_node, ElementType data);
     
     b_search_tree();
+
+    ElementType smallest(Node<ElementType>* n);
     void insert(ElementType data);
-    bool lookUp(Node<ElementType>* root_, ElementType data); 
+    bool lookUp(ElementType data);
+    bool lookUp_helper(Node<ElementType>* root_, ElementType data); 
     void delete_element(ElementType data);
     int getSize();
-   // std::string toString();
+    std::string toString(Node<ElementType>* curr);
 };
 #include "../vim/b_search_tree.cpp"
 }
